@@ -1,6 +1,6 @@
 import React from "react";
-import HomePage from "./page";
-
+import Navbar from "@/components/Navbar";
+import HomePageHero from "@/components/HomePageHero";
 export const metadata = {
   title: "Find Your Chicken",
   keywords: "chicken, egg, backyard chicken",
@@ -11,7 +11,9 @@ const MainLayout = ({ children }) => {
   return (
     <html>
       <body>
+        <Navbar />
         <main>{children}</main>
+        <HomePageHero />
       </body>
     </html>
   );
