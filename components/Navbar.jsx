@@ -6,10 +6,12 @@ import { FaGoogle } from "react-icons/fa";
 import { FiMenu } from "react-icons/fi";
 import { useState } from "react";
 import useWindowSize from "@/hooks/useWindowSize";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const { width } = useWindowSize();
   const [isMobileMenuOn, setIsMobileMenuOn] = useState(false);
+  const pathname = usePathname();
 
   //Close the mobile menu if window width is >700
 
@@ -30,9 +32,21 @@ const Navbar = () => {
       {width < 700 && isMobileMenuOn && (
         <div className={styles.mobileMenu}>
           {" "}
-          <Link href="/">Home Page</Link>
-          <Link href="/chickens">Go to chickens</Link>
-          <Link href="/chickens/add">Add chickens</Link>
+          <Link className={pathname == "/" ? styles.active : ""} href="/">
+            Home Page
+          </Link>
+          <Link
+            className={pathname == "/chickens" ? styles.active : ""}
+            href="/chickens"
+          >
+            Go to chickens
+          </Link>
+          <Link
+            className={pathname == "/chickens/add" ? styles.active : ""}
+            href="/chickens/add"
+          >
+            Add chickens
+          </Link>
         </div>
       )}
       {/* Wide screen menu */}
@@ -40,9 +54,21 @@ const Navbar = () => {
       {width > 700 && (
         <div className={styles.mainMenu}>
           {" "}
-          <Link href="/">Home Page</Link>
-          <Link href="/chickens">Go to chickens</Link>
-          <Link href="/chickens/add">Add chickens</Link>
+          <Link className={pathname == "/" ? styles.active : ""} href="/">
+            Home Page
+          </Link>
+          <Link
+            className={pathname == "/chickens" ? styles.active : ""}
+            href="/chickens"
+          >
+            Go to chickens
+          </Link>
+          <Link
+            className={pathname == "/chickens/add" ? styles.active : ""}
+            href="/chickens/add"
+          >
+            Add chickens
+          </Link>
         </div>
       )}
 

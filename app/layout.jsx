@@ -1,3 +1,4 @@
+import "../styles/globals.scss";
 import React from "react";
 import Navbar from "@/components/Navbar";
 import HomePageHero from "@/components/HomePageHero";
