@@ -12,6 +12,7 @@ const Navbar = () => {
   const { width } = useWindowSize();
   const [isMobileMenuOn, setIsMobileMenuOn] = useState(false);
   const pathname = usePathname();
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   //Close the mobile menu if window width is >700
 
@@ -72,11 +73,13 @@ const Navbar = () => {
         </div>
       )}
 
-      <button className={styles.title}>
-        {" "}
-        <FaGoogle />
-        Log in or register
-      </button>
+      {!isLoggedIn && (
+        <button className={styles.title}>
+          {" "}
+          <FaGoogle />
+          Log in or register
+        </button>
+      )}
       <button>Profile</button>
 
       <button>Messages</button>

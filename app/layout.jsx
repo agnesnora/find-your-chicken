@@ -1,7 +1,6 @@
 import "../styles/globals.scss";
 import React from "react";
 import Navbar from "@/components/Navbar";
-import HomePageHero from "@/components/HomePageHero";
 export const metadata = {
   title: "Find Your Chicken",
   keywords: "chicken, egg, backyard chicken",
@@ -14,7 +13,6 @@ const MainLayout = ({ children }) => {
       <body>
         <Navbar />
         <main>{children}</main>
-        <HomePageHero />
       </body>
     </html>
   );
