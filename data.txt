@@ -1,0 +1,205 @@
+[
+  {
+    "owner": "Kiss Ildikó",
+    "name": "Kendermagos magyar tyúk",
+    "type": "Traditional Breeds",
+    "description": "A traditional Hungarian breed with a hardy and rustic nature, these chickens are great foragers and suited for free-range environments. They have attractive speckled plumage.",
+    "location": {
+      "street": "Rákóczi Ferenc utca 12",
+      "city": "Hernádvécse",
+      "zipcode": "3854"
+    },
+    "rate": 4500,
+    "seller_info": {
+      "email": "ildiko.kiss@example.com",
+      "name": "Kiss Ildikó",
+      "phone": "+36 20 555 6666"
+    },
+    "images": [
+      {"src": "chicken5", "ref": "hobbyknipse from Pixabay"},
+      {"src": "chicken6", "ref": "hobbyknipse from Pixabay"},
+      {"src": "chicken7", "ref": "hobbyknipse from Pixabay"}
+    ],
+    "is_featured": true
+  },
+  {
+    "owner": "Szabó László",
+    "name": "Australorp",
+    "type": "Egg-Laying Breeds",
+    "description": "Known for their excellent egg-laying ability, Australorps are calm, friendly, and hardy birds, ideal for backyard flocks. They typically have glossy black feathers.",
+    "location": {
+      "street": "Petőfi Sándor utca 15",
+      "city": "Körösszegapáti",
+      "zipcode": "4137"
+    },
+    "rate": 5000,
+    "seller_info": {
+      "email": "laszlo.szabo@example.com",
+      "name": "Szabó László",
+      "phone": "+36 30 111 2222"
+    },
+    "images": [
+      {"src": "chicken11", "ref": "Elsemargnet from Pixabay"},
+      {"src": "chicken12", "ref": "Elsemargnet from Pixabay"}
+    ],
+    "is_featured": false
+  },
+  {
+    "owner": "Farkas Zsófia",
+    "name": "Silky Chicken (Silkie)",
+    "type": "Ornamental Breeds",
+    "description": "A unique and popular breed with soft, fur-like feathers and a gentle, friendly temperament. Silkies are often kept as pets due to their docile nature and small size.",
+    "location": {
+      "street": "Ady Endre utca 8",
+      "city": "Kéked",
+      "zipcode": "3989"
+    },
+    "rate": 6000,
+    "seller_info": {
+      "email": "zsofia.farkas@example.com",
+      "name": "Farkas Zsófia",
+      "phone": "+36 70 333 4444"
+    },
+    "images": [
+      {"src": "chicken13", "ref": "pocketmacro from Pixabay"},
+      {"src": "chicken14", "ref": "furbymama from Pixabay"},
+      {"src": "chicken2", "ref": "eloneo from Pixabay"}
+    ],
+    "is_featured": true
+  },
+  {
+    "owner": "Nagy Tamás",
+    "name": "Sussex",
+    "type": "Dual-Purpose Breeds",
+    "description": "A friendly, dual-purpose breed with excellent egg-laying capabilities. Sussex chickens are adaptable and hardy, making them a popular choice for backyard flocks.",
+    "location": {
+      "street": "Széchenyi utca 3",
+      "city": "Alsómocsolád",
+      "zipcode": "7345"
+    },
+    "rate": 4800,
+    "seller_info": {
+      "email": "tamas.nagy@example.com",
+      "name": "Nagy Tamás",
+      "phone": "+36 30 444 5555"
+    },
+    "images": [
+      {"src": "chicken15", "ref": "JackieLou DL from Pixabay"},
+      {"src": "chicken16", "ref": "Emma Morin from Pixabay"},
+      {"src": "chicken17", "ref": "Emma Morin from Pixabay"}
+    ],
+    "is_featured": false
+  },
+  {
+    "owner": "Kovács Mária",
+    "name": "Polish",
+    "type": "Ornamental Breeds",
+    "description": "Famous for their distinct feathered crests, Polish chickens are mostly ornamental. They have a calm temperament but can be skittish due to reduced vision from their crests.",
+    "location": {
+      "street": "Kossuth Lajos utca 9",
+      "city": "Újszilvás",
+      "zipcode": "2768"
+    },
+    "rate": 5300,
+    "seller_info": {
+      "email": "maria.kovacs@example.com",
+      "name": "Kovács Mária",
+      "phone": "+36 20 777 8888"
+    },
+    "images": [
+      {"src": "chicken20", "ref": "JamesDeMers from Pixabay"},
+      {"src": "chicken21", "ref": "JamesDeMers from Pixabay"}
+    ],
+    "is_featured": true
+  },
+  {
+    "owner": "Balogh Ferenc",
+    "name": "Magyar parlagi tyúk",
+    "type": "Traditional Breeds",
+    "description": "A robust, traditional breed that is well-suited for free-range farming. They are good egg layers, adaptable, and hardy in various climates.",
+    "location": {
+      "street": "Hunyadi János utca 11",
+      "city": "Sárrétudvari",
+      "zipcode": "4171"
+    },
+    "rate": 4700,
+    "seller_info": {
+      "email": "ferenc.balogh@example.com",
+      "name": "Balogh Ferenc",
+      "phone": "+36 70 666 7777"
+    },
+    "images": [
+      {"src": "chicken8", "ref": "Ralphs_Fotos from Pixabay"},
+      {"src": "chicken19", "ref": "NickyPe from Pixabay"}
+    ],
+    "is_featured": false
+  },
+  {
+    "owner": "Tóth Anna",
+    "name": "Magyar parlagi tyúk",
+    "type": "Traditional Breeds",
+    "description": "A robust, traditional breed that is well-suited for free-range farming. They are good egg layers, adaptable, and hardy in various climates.",
+    "location": {
+      "street": "Petőfi utca 2",
+      "city": "Csökmő",
+      "zipcode": "4135"
+    },
+    "rate": 4600,
+    "seller_info": {
+      "email": "anna.toth@example.com",
+      "name": "Tóth Anna",
+      "phone": "+36 30 888 9999"
+    },
+    "images": [
+      {"src": "chicken9", "ref": "JACLOU_DL from Pixabay"},
+      {"src": "chicken10", "ref": "manfredrichter from Pixabay"},
+      {"src": "chicken18", "ref": "Jill Wellington from Pixabay"}
+    ],
+    "is_featured": true
+  },
+  {
+    "owner": "Varga Gábor",
+    "name": "Brahma tyúk",
+    "type": "Dual-Purpose Breeds",
+    "description": "Known for their large size and gentle nature, Brahmas are excellent dual-purpose birds, providing both meat and eggs. They are also winter-hardy due to their feathered legs and thick plumage.",
+    "location": {
+      "street": "Deák Ferenc utca 13",
+      "city": "Tápiószecső",
+      "zipcode": "2251"
+    },
+    "rate": 5500,
+    "seller_info": {
+      "email": "gabor.varga@example.com",
+      "name": "Varga Gábor",
+      "phone": "+36 20 999 0000"
+    },
+    "images": [
+      {"src": "chicken22", "ref": "harikalardiyari from Pixabay"},
+      {"src": "chicken23", "ref": "harikalardiyari from Pixabay"}
+    ],
+    "is_featured": false
+  },
+  {
+    "owner": "Horváth Zoltán",
+    "name": "Wyandotte",
+    "type": "Dual-Purpose Breeds",
+    "description": "Wyandottes are hardy, dual-purpose chickens known for both egg and meat production. They are friendly and adapt well to colder climates.",
+    "location": {
+      "street": "Szabadság utca 17",
+      "city": "Vásárosnamény",
+      "zipcode": "4800"
+    },
+    "rate": 5200,
+    "seller_info": {
+      "email": "zoltan.horvath@example.com",
+      "name": "Horváth Zoltán",
+      "phone": "+36 30 222 1111"
+    },
+    "images": [
+      {"src": "chicken24", "ref": "harikalardiyari from Pixabay"},
+      {"src": "chicken25", "ref": "harikalardiyari from Pixabay"},
+      {"src": "chicken26", "ref": "harikalardiyari from Pixabay"}
+    ],
+    "is_featured": true
+  }
+]

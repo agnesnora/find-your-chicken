@@ -1,9 +1,13 @@
 "use client";
-
+import ChickenCard from "@/components/ChickenCard";
 import React from "react";
 
 const ChickensPage = () => {
-  return <div>Chickens Page </div>;
+  return (
+    <div>
+      <ChickenCard /> <ChickenCard />
+    </div>
+  );
 };
 
 export default ChickensPage;
