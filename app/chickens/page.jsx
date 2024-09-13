@@ -1,11 +1,18 @@
-"use client";
-import ChickenCard from "@/components/ChickenCard";
 import React from "react";
-
+import chickens from "@/chickens.json";
 const ChickensPage = () => {
+  console.log(chickens);
   return (
     <div>
-      <ChickenCard /> <ChickenCard />
+      {chickens.length === 0 ? (
+        <p>Chicken not found</p>
+      ) : (
+        <div>
+          {chickens.map((chicken) => (
+            <p>{chicken.name}</p>
+          ))}
+        </div>
+      )}
     </div>
   );
 };

@@ -9,7 +9,7 @@ const ChickenCard = () => {
         {" "}
         <Image
           className={styles.image}
-          layout="fill" // Change to "fill"
+          layout="fill"
           objectFit="cover"
           src="/assets/images/chicken5.jpg"
         />
