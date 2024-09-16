@@ -15,6 +15,11 @@ const ChickenSchema = new Schema(
       type: String,
       required: true,
     },
+    images: [
+      {
+        type: String,
+      },
+    ],
     description: {
       type: String,
     },
@@ -56,6 +61,7 @@ const ChickenSchema = new Schema(
   },
   {
     timestamps: true,
+    collection: "Chickens",
   }
 );
 

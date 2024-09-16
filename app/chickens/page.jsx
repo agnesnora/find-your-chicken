@@ -1,15 +1,31 @@
 import React from "react";
-import chickens from "@/chickens.json";
-const ChickensPage = () => {
-  console.log(chickens);
+import connectDB from "@/config/database";
+import Chicken from "@/models/Chickens";
+import ChickenCard from "@/components/ChickenCard";
+const ChickensPage = async () => {
+  await connectDB();
+
+  let chickens = [];
+  try {
+    chickens = await Chicken.find();
+    console.log(chickens.images);
+  } catch (error) {
+    console.error("Error fetching chickens:", error);
+  }
+
   return (
     <div>
       {chickens.length === 0 ? (
-        <p>Chicken not found</p>
+        <p>No chickens found</p>
       ) : (
         <div>
+          {/*       {chickens.map((chicken) => (
+            <p key={chicken._id}>
+              {chicken.name} - {chicken.type}
+            </p>
+          ))} */}
           {chickens.map((chicken) => (
-            <p>{chicken.name}</p>
+            <ChickenCard chicken={chicken} key={chicken._id} />
           ))}
         </div>
       )}
