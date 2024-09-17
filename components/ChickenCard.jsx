@@ -4,24 +4,17 @@ import styles from "../styles/Chickencard.module.scss";
 
 const ChickenCard = ({ chicken }) => {
   console.log(chicken);
-  const images = Array.isArray(chicken.images) ? chicken.images : [];
-  const firstImageSrc = images.length > 0 ? images[0].src : null;
 
   return (
     <div className={styles.container}>
       <div className={styles.imageContainer}>
-        {firstImageSrc ? (
-          <Image
-            className={styles.image}
-            src={`/assets/images/${firstImageSrc}`} // Path based on `src` value
-            alt={chicken.name || "Chicken image"} // Alt text for accessibility
-            width={400} // Adjust width as needed
-            height={300} // Adjust height as needed
-            style={{ objectFit: "cover" }} // Control image fit
-          />
-        ) : (
-          <p>No image available</p> // Fallback message if no images
-        )}
+        {" "}
+        <Image
+          className={styles.image}
+          layout="fill"
+          objectFit="cover"
+          src={`/images/chicken1.jpg`}
+        />
       </div>
 
       <h1>{chicken.name}</h1>
