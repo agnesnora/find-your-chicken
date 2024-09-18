@@ -1,22 +1,22 @@
 "use client";
 import styles from "../styles/Navbar.module.scss";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { FaGoogle } from "react-icons/fa";
 import { FiMenu } from "react-icons/fi";
-import { useState } from "react";
 import useWindowSize from "@/hooks/useWindowSize";
 import { usePathname } from "next/navigation";
 import { signIn, signOut, useSession, getProviders } from "next-auth/react";
+import Image from "next/image";
 
 const Navbar = () => {
   const { data: session, status } = useSession();
-  console.log(session);
+  const [providers, setProviders] = useState(null);
+  const profileImage = session?.user?.image;
 
   const { width } = useWindowSize();
-  const [isMobileMenuOn, setIsMobileMenuOn] = useState(false);
   const pathname = usePathname();
-  const [providers, setProviders] = useState(null);
+  const [isMobileMenuOn, setIsMobileMenuOn] = useState(false);
 
   // Close the mobile menu if window width is >700
   useEffect(() => {
@@ -28,17 +28,26 @@ const Navbar = () => {
   // Fetch providers for authentication (like Google)
   useEffect(() => {
     const setAuthProviders = async () => {
-      const res = await getProviders();
-      setProviders(res);
+      try {
+        const res = await getProviders();
+        setProviders(res);
+      } catch (error) {
+        console.error("Error fetching providers:", error);
+      }
     };
     setAuthProviders();
   }, []);
 
-  // Check if the session is loading or undefined
-  /*   if (!session && status === "loading") {
+  // Handle mobile menu link clicks and close the menu
+  const handleMobileLinkClick = () => {
+    setIsMobileMenuOn(false);
+  };
+
+  // If session is loading, show a loading message
+  if (status === "loading") {
     return <p>Loading...</p>; // Or a loading spinner
   }
- */
+
   return (
     <div className={styles.navbar}>
       {/* Mobile menu toggle icon */}
@@ -49,18 +58,24 @@ const Navbar = () => {
       {/* Mobile menu dropdown */}
       {width < 700 && isMobileMenuOn && (
         <div className={styles.mobileMenu}>
-          <Link className={pathname == "/" ? styles.active : ""} href="/">
+          <Link
+            className={pathname == "/" ? styles.active : ""}
+            href="/"
+            onClick={handleMobileLinkClick}
+          >
             Home Page
           </Link>
           <Link
             className={pathname == "/chickens" ? styles.active : ""}
             href="/chickens"
+            onClick={handleMobileLinkClick}
           >
             Go to chickens
           </Link>
           <Link
             className={pathname == "/chickens/add" ? styles.active : ""}
             href="/chickens/add"
+            onClick={handleMobileLinkClick}
           >
             Add chickens
           </Link>
@@ -79,34 +94,46 @@ const Navbar = () => {
           >
             Go to chickens
           </Link>
-          <Link
-            className={pathname == "/chickens/add" ? styles.active : ""}
-            href="/chickens/add"
-          >
-            Add chickens
-          </Link>
+          {session && (
+            <Link
+              className={pathname == "/chickens/add" ? styles.active : ""}
+              href="/chickens/add"
+            >
+              Add chickens
+            </Link>
+          )}
         </div>
       )}
 
-      {!session &&
-        providers &&
-        Object.values(providers).map((provider, index) => (
-          <button
-            key={index}
-            className={styles.title}
-            onClick={() => signIn(provider.id)}
-          >
-            <FaGoogle />
-            Log in or register
-          </button>
-        ))}
+      {/* Show Sign-in/Sign-out buttons based on session state */}
+      {!session && providers
+        ? Object.values(providers).map((provider, index) => (
+            <button
+              key={index}
+              className={styles.title}
+              onClick={() => signIn(provider.id)}
+            >
+              <FaGoogle />
+              Log in or register
+            </button>
+          ))
+        : providers === null && <p>Loading login options...</p>}
 
       {session && (
-        <>
+        <div className={styles.userActions}>
           <button onClick={() => signOut()}>Sign out</button>
-          <button>Profile</button>
+
+          <button>
+            {" "}
+            <Image
+              src={profileImage}
+              width={50}
+              height={50}
+              alt="profileimage"
+            />
+          </button>
           <button>Messages</button>
-        </>
+        </div>
       )}
     </div>
   );
