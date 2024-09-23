@@ -38,6 +38,9 @@ const ChickenSchema = new Schema(
     rate: {
       type: Number,
     },
+    eggs: {
+      type: Number,
+    },
     seller_info: {
       name: {
         type: String,
