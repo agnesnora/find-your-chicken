@@ -8,7 +8,6 @@ const ChickensPage = async () => {
   let chickens = [];
   try {
     chickens = await Chicken.find();
-    console.log(chickens.images);
   } catch (error) {
     console.error("Error fetching chickens:", error);
   }

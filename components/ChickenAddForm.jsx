@@ -16,7 +16,7 @@ const ChickenAddForm = () => {
     },
     eggs: "",
 
-    rates: "",
+    rate: "",
     seller_info: {
       name: "",
       email: "",
@@ -169,8 +169,8 @@ const ChickenAddForm = () => {
               <input
                 type="number"
                 id="rate"
-                name="rates"
-                value={fields.rates}
+                name="rate"
+                value={fields.rate}
                 onChange={handleChange}
               />
             </div>

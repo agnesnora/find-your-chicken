@@ -16,9 +16,7 @@
       "phone": "+36 20 555 6666"
     },
     "images": [
-      {"src": "chicken5", "ref": "hobbyknipse from Pixabay"},
-      {"src": "chicken6", "ref": "hobbyknipse from Pixabay"},
-      {"src": "chicken7", "ref": "hobbyknipse from Pixabay"}
+     "chicken5","chicken6","chicken7"
     ],
     "is_featured": true
   },
@@ -39,9 +37,7 @@
       "phone": "+36 30 111 2222"
     },
     "images": [
-      {"src": "chicken11", "ref": "Elsemargnet from Pixabay"},
-      {"src": "chicken12", "ref": "Elsemargnet from Pixabay"}
-    ],
+      chicken11","chicken12" ],
     "is_featured": false
   },
   {
@@ -60,11 +56,7 @@
       "name": "Farkas Zsófia",
       "phone": "+36 70 333 4444"
     },
-    "images": [
-      {"src": "chicken13", "ref": "pocketmacro from Pixabay"},
-      {"src": "chicken14", "ref": "furbymama from Pixabay"},
-      {"src": "chicken2", "ref": "eloneo from Pixabay"}
-    ],
+    "images": ["chicken13","chicken14", "chicken2"],
     "is_featured": true
   },
   {
@@ -83,11 +75,7 @@
       "name": "Nagy Tamás",
       "phone": "+36 30 444 5555"
     },
-    "images": [
-      {"src": "chicken15", "ref": "JackieLou DL from Pixabay"},
-      {"src": "chicken16", "ref": "Emma Morin from Pixabay"},
-      {"src": "chicken17", "ref": "Emma Morin from Pixabay"}
-    ],
+    "images": [ "chicken15","chicken16","chicken17"],
     "is_featured": false
   },
   {
@@ -106,10 +94,7 @@
       "name": "Kovács Mária",
       "phone": "+36 20 777 8888"
     },
-    "images": [
-      {"src": "chicken20", "ref": "JamesDeMers from Pixabay"},
-      {"src": "chicken21", "ref": "JamesDeMers from Pixabay"}
-    ],
+    "images": ["chicken20","chicken21"],
     "is_featured": true
   },
   {
@@ -128,10 +113,7 @@
       "name": "Balogh Ferenc",
       "phone": "+36 70 666 7777"
     },
-    "images": [
-      {"src": "chicken8", "ref": "Ralphs_Fotos from Pixabay"},
-      {"src": "chicken19", "ref": "NickyPe from Pixabay"}
-    ],
+    "images": ["chicken8","chicken19"],
     "is_featured": false
   },
   {
@@ -150,11 +132,7 @@
       "name": "Tóth Anna",
       "phone": "+36 30 888 9999"
     },
-    "images": [
-      {"src": "chicken9", "ref": "JACLOU_DL from Pixabay"},
-      {"src": "chicken10", "ref": "manfredrichter from Pixabay"},
-      {"src": "chicken18", "ref": "Jill Wellington from Pixabay"}
-    ],
+    "images": ["chicken9","chicken10","chicken18"],
     "is_featured": true
   },
   {
@@ -173,10 +151,7 @@
       "name": "Varga Gábor",
       "phone": "+36 20 999 0000"
     },
-    "images": [
-      {"src": "chicken22", "ref": "harikalardiyari from Pixabay"},
-      {"src": "chicken23", "ref": "harikalardiyari from Pixabay"}
-    ],
+    "images": ["chicken22","chicken23"],
     "is_featured": false
   },
   {
@@ -196,9 +171,9 @@
       "phone": "+36 30 222 1111"
     },
     "images": [
-      {"src": "chicken24", "ref": "harikalardiyari from Pixabay"},
-      {"src": "chicken25", "ref": "harikalardiyari from Pixabay"},
-      {"src": "chicken26", "ref": "harikalardiyari from Pixabay"}
+      "chicken24",
+     "chicken25", 
+      "chicken26",
     ],
     "is_featured": true
   }

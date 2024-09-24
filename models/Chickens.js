@@ -52,11 +52,7 @@ const ChickenSchema = new Schema(
         type: String,
       },
     },
-    images: [
-      {
-        type: String,
-      },
-    ],
+
     is_featured: {
       type: Boolean,
       default: false,
