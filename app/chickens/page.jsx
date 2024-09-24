@@ -2,6 +2,8 @@ import React from "react";
 import connectDB from "@/config/database";
 import Chicken from "@/models/Chickens";
 import ChickenCard from "@/components/ChickenCard";
+import styles from "../../styles/Chickens.module.scss";
+
 const ChickensPage = async () => {
   await connectDB();
 
@@ -17,12 +19,7 @@ const ChickensPage = async () => {
       {chickens.length === 0 ? (
         <p>No chickens found</p>
       ) : (
-        <div>
-          {/*       {chickens.map((chicken) => (
-            <p key={chicken._id}>
-              {chicken.name} - {chicken.type}
-            </p>
-          ))} */}
+        <div className={styles.grid}>
           {chickens.map((chicken) => (
             <ChickenCard chicken={chicken} key={chicken._id} />
           ))}

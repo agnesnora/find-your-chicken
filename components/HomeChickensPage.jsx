@@ -2,6 +2,7 @@ import React from "react";
 import connectDB from "@/config/database";
 import Chicken from "@/models/Chickens";
 import ChickenCard from "@/components/ChickenCard";
+import styles from "../styles/Chickens.module.scss";
 const HomeChickensPage = async () => {
   await connectDB();
 
@@ -10,9 +11,12 @@ const HomeChickensPage = async () => {
   return (
     <div>
       <h2>Recent chickens</h2>
-      {recentChickens.map((chicken) => (
-        <ChickenCard chicken={chicken} key={chicken._id} />
-      ))}
+      <div className={styles.grid}>
+        {" "}
+        {recentChickens.map((chicken) => (
+          <ChickenCard chicken={chicken} key={chicken._id} />
+        ))}
+      </div>
     </div>
   );
 };
