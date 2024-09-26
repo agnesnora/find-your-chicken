@@ -17,6 +17,7 @@ const Navbar = () => {
   const { width } = useWindowSize();
   const pathname = usePathname();
   const [isMobileMenuOn, setIsMobileMenuOn] = useState(false);
+  const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false);
 
   // Close the mobile menu if window width is >700
   useEffect(() => {
@@ -105,7 +106,6 @@ const Navbar = () => {
         </div>
       )}
 
-      {/* Show Sign-in/Sign-out buttons based on session state */}
       {!session && providers
         ? Object.values(providers).map((provider, index) => (
             <button
@@ -122,9 +122,7 @@ const Navbar = () => {
       {session && (
         <div className={styles.userActions}>
           <button onClick={() => signOut()}>Sign out</button>
-
-          <button>
-            {" "}
+          <button onClick={() => setIsProfileMenuOpen((prev) => !prev)}>
             <Image
               src={profileImage}
               width={50}
@@ -132,7 +130,36 @@ const Navbar = () => {
               alt="profileimage"
             />
           </button>
+
           <button>Messages</button>
+        </div>
+      )}
+      {isProfileMenuOpen && (
+        <div>
+          <Link
+            href="/profile"
+            onClick={() => {
+              setIsProfileMenuOpen(false);
+            }}
+          >
+            Your Profile
+          </Link>
+          <Link
+            href="/properties/saved"
+            onClick={() => {
+              setIsProfileMenuOpen(false);
+            }}
+          >
+            Saved Properties
+          </Link>
+          <button
+            onClick={() => {
+              setIsProfileMenuOpen(false);
+              signOut();
+            }}
+          >
+            Sign Out
+          </button>
         </div>
       )}
     </div>

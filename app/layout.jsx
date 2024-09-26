@@ -2,6 +2,8 @@ import "../styles/globals.scss";
 import React from "react";
 import Navbar from "@/components/Navbar";
 import AuthProvider from "@/components/AuthProvider";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 export const metadata = {
   title: "Find Your Chicken",
   keywords: "chicken, egg, backyard chicken",
@@ -15,6 +17,7 @@ const MainLayout = ({ children }) => {
         <body>
           <Navbar />
           <main>{children}</main>
+          <ToastContainer />
         </body>
       </html>
     </AuthProvider>

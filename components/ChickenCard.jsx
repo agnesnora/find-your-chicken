@@ -10,8 +10,8 @@ const ChickenCard = ({ chicken }) => {
         {" "}
         <Image
           className={styles.image}
-          layout="fill"
-          objectFit="cover"
+          width={400}
+          height={400}
           src={chicken.images[0]}
         />
       </div>
